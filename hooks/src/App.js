@@ -233,21 +233,41 @@ const findMM = mm.find((e) => e).id
 console.log(findMM) // very close , syntax difference 
 
 
-// 2.  
+// 2. which user commented first ?
 
-
-const first = comments[0]
-
+/// const first = comments[0]
 // users.filter((d) => d.id === first).find((e) => e).id // very close 
 
-const user = users.find((e) => e.id === first.userId).firstName
+const user = users.find((e) => e.id === comments[0].userId).firstName
 
-console.log(user)
-
-
+console.log(user) // Sam
 
 
+// 3) Which user commented 'OK great thanks'?
 
+
+
+const okay = comments.filter((c) => c.text === 'OK great thanks')
+
+console.log(okay)
+
+
+
+
+
+
+comments.map((comment) =>{
+  const {firstName, lastName} = users.find((user) => user.id === comment.userId )
+  return{
+      ...comment,
+      firstName,
+      lastName
+      
+  }
+
+})
+
+console.log(comments)
 
 
 const PrevName= useRef();
