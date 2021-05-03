@@ -63,7 +63,7 @@ const people = [
 // Get everyones first name and last name
   // spread old key and values, then create fullName, add first name and last name into ti 
 
-//  const getname = people.map((name => (...name , fullName: `${name.firstName}  ${name.lastName}`)
+ const getname = people.map((name => (...name , fullName: `${name.firstName}  ${name.lastName}`)
 
 
 // order from youngest to oldest
@@ -148,7 +148,7 @@ console.log(notDelivered) // easily completed
           console.log(total) //  with some help 
 
 
-// 3. Have all the orders ben deliverd 
+// 3. Have all the orders been deliverd 
 
           const hasDelivered = orders.every((e) =>{
             return e.delivered === true 
